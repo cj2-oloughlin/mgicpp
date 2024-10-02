@@ -15,6 +15,13 @@ Game::~Game()
 
 bool Game::init()
 {
+	// init sprite
+	if (!background_texture.loadFromFile("../Data/WhackaMole Worksheet/background.png"))
+	{
+		std::cout << "background texture did not load\n";
+	}
+	background.setTexture(background_texture);
+
 
   return true;
 }
@@ -26,7 +33,7 @@ void Game::update(float dt)
 
 void Game::render()
 {
-
+	window.draw(background);
 }
 
 void Game::mouseClicked(sf::Event event)

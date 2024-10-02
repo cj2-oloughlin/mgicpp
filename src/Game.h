@@ -20,6 +20,10 @@ class Game
   sf::Sprite ball;
   sf::Texture ball_texture;
 
+
+  sf::Sprite background;
+  sf::Texture background_texture;
+
 };
 
 #endif // PLATFORMER_GAME_H
