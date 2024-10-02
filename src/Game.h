@@ -17,13 +17,20 @@ class Game
 
  private:
   sf::RenderWindow& window;
-  sf::Sprite ball;
-  sf::Texture ball_texture;
+  sf::Font font;
 
+  sf::Text title_text;
+
+  sf::Sprite bird;
+  sf::Texture bird_texture;
 
   sf::Sprite background;
   sf::Texture background_texture;
 
+
+  //Gamestates
+  enum class GameStates {MENU, GAMEPLAY, EXIT, LOSE};
+  GameStates gameStates = GameStates::MENU;
 };
 
 #endif // PLATFORMER_GAME_H
